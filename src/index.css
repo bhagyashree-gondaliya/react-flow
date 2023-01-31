@@ -1,13 +1,119 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.react-flow .react-flow__handle {
+  width: 5px;
+  height: 5px;
+  /* background-color: brown; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.react-flow .react-flow__handle-top {
+  top: -10px;
 }
+
+.react-flow .react-flow__handle-bottom {
+  bottom: -10px;
+}
+
+.react-flow .react-flow__node {
+  height: 30px;
+  width: 120px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: none;
+  border-left: solid black 3px;
+  background: #f3eeee;
+  font-weight: 700;
+}
+
+
+.react-flow .react-flow__node-input {
+  height: 30px;
+  width: 120px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: none;
+  border-left: solid blue 3px;
+  background: #f3eeee;
+  font-weight: 700;
+}
+
+.react-flow .react-flow__node-output {
+  height: 30px;
+  width: 120px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: none;
+  border-left: solid red 3px;
+  background: #f3eeee;
+  font-weight: 700;
+}
+ 
+.react-flow .react-flow__edge path,
+.react-flow__connectionline path {
+  stroke-width: 2;
+}
+
+.wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.dndflow {
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.dndflow aside {
+  border-right: 1px solid #eee;
+  padding: 15px 10px;
+  font-size: 12px;
+  background: #fcfcfc;
+}
+
+.dndflow aside .description {
+  margin-bottom: 10px;
+}
+
+.dndflow .dndnode {
+  height: 20px;
+  padding: 4px;
+  border: 1px solid #1a192b;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+}
+
+.dndflow .dndnode.input {
+  border-color: #0041d0;
+}
+
+.dndflow .dndnode.output {
+  border-color: #ff0072;
+}
+
+.dndflow .reactflow-wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.dndflow .selectall {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .dndflow {
+    flex-direction: row;
+  }
+
+  .dndflow aside {
+    width: 20%;
+    max-width: 250px;
+  }
+}
+
